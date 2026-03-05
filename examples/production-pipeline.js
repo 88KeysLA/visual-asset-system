@@ -108,7 +108,7 @@ async function generateMusicVisualization(bpm, mood, outputName) {
   const imageTime = ((Date.now() - imageStart) / 1000).toFixed(1);
   console.log(`✓ Image generated in ${imageTime}s`);
 
-  // Save image
+  // Save image locally first
   await fs.mkdir('./output/production', { recursive: true });
   const imageBuffer = Buffer.from(geminiOutput[0].split(',')[1], 'base64');
   const imagePath = `./output/production/${outputName}_image.png`;
