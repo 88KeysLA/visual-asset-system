@@ -1,0 +1,15 @@
+{
+  "name": "visual-asset-system",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node examples/quick-test.js",
+    "compare:styles": "node examples/compare-style-guides.js",
+    "generate": "node examples/production-pipeline.js",
+    "create:set": "node examples/create-character-set.js",
+    "search": "node -e \"import('./lib/reference-manager.js').then(m => new m.ReferenceManager().search(process.argv[1]).then(console.log))\" --"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
